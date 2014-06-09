@@ -1,0 +1,5 @@
+﻿User-agent: *
+Disallow:
+Allow: /
+
+Sitemap: http://www.sbirkaprikladu.eu/sitemap.aspx

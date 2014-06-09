@@ -1,0 +1,11 @@
+D:\!!!ASP.NET!!!\PARDIK.CZ\SbirkaPrikladu.eu\Dev\Pardik\SbirkaPrikladuEU\obj\Debug\SbirkaPrikladuEU.csprojResolveAssemblyReference.cache
+D:\!!!ASP.NET!!!\PARDIK.CZ\SbirkaPrikladu.eu\Dev\Pardik\SbirkaPrikladuEU\bin\SbirkaPrikladuEU.dll
+D:\!!!ASP.NET!!!\PARDIK.CZ\SbirkaPrikladu.eu\Dev\Pardik\SbirkaPrikladuEU\bin\SbirkaPrikladuEU.pdb
+D:\!!!ASP.NET!!!\PARDIK.CZ\SbirkaPrikladu.eu\Dev\Pardik\SbirkaPrikladuEU\obj\Debug\SbirkaPrikladuEU.dll
+D:\!!!ASP.NET!!!\PARDIK.CZ\SbirkaPrikladu.eu\Dev\Pardik\SbirkaPrikladuEU\obj\Debug\SbirkaPrikladuEU.pdb
+D:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\bin\SbirkaPrikladuEU.dll.config
+D:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\bin\SbirkaPrikladuEU.dll
+D:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\bin\SbirkaPrikladuEU.pdb
+D:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\obj\Debug\SbirkaPrikladuEU.csprojResolveAssemblyReference.cache
+D:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\obj\Debug\SbirkaPrikladuEU.dll
+D:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\obj\Debug\SbirkaPrikladuEU.pdb

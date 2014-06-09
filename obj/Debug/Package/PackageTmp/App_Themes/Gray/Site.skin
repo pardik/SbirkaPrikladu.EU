@@ -1,0 +1,4 @@
+﻿<asp:RadioButtonList BackColor="White" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1" runat="Server" />
+<asp:CheckBoxList BackColor="White" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1" runat="Server" />
+<asp:TreeView ShowLines="true" ShowExpandCollapse="false" runat="server" ForeColor="Black" SelectedNodeStyle-Font-Bold="true" CssClass="treeView" />
+<asp:GridView runat="server" AutoGenerateColumns="False" CssClass="table table-striped" GridLines="None" AllowPaging="True" AllowSorting="True" />

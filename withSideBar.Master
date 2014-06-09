@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="withSideBar.master.cs" Inherits="SbirkaPrikladuEU.withSideBar" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register Src="~/Class/topMenu.ascx" TagName="topMenu" TagPrefix="uc" %>
+<%@ Register Src="~/Class/footer.ascx" TagName="footer" TagPrefix="uc" %>
+<%@ Register Src="~/Class/timedInfo.ascx" TagName="timedInfo" TagPrefix="uc" %>
+<%@ Register Src="~/Class/searchPN.ascx" TagName="searchPN" TagPrefix="uc" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <script src="/Scripts/jquery-1.7.2.js" type="text/javascript"></script>
+    <script src="/Scripts/bootstrap.js" type="text/javascript"></script>    
+    <script src="/ckeditor/plugins/ckeditor_wiris/core/display.js" type="text/javascript"></script>    
+    <link rel="stylesheet/less" type="text/css" href="/App_Themes/Gray/Site.less.css" />    
+    <link rel="stylesheet/less" type="text/css" href="/App_Themes/print.less.css" media="print" />    
+    <script src="/Scripts/less-1.3.0.min.js" type="text/javascript"></script>
+    <title>Sbírka příkladů z matematiky</title>
+    <%-- Google analytics script --%>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-33282503-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body class="body">
+    <form id="form1" runat="server">
+    <asp:ToolkitScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true" EnableHistory="True" OnNavigate="ScriptManager1_Navigate" />
+    <asp:HiddenField ID="beforeBackClickedLastInsertedExamplesPageIndexHF" runat="server" />
+    <asp:HiddenField ID="beforeBackClickedExamplesFromGroupPageIndexHF" runat="server" />
+    <asp:HiddenField ID="beforeBackClickedSearchExamplesByAutorPageIndexHF" runat="server" />
+    <div class="container">
+        <div id="topMenu" class="row">
+            <div class="span2 visible-desktop">&nbsp;</div>
+            <div class="span10 topMenu"><uc:topMenu runat="server" /></div>
+        </div>
+        <div id="top" class="row">
+            <div class="top span12 visible-desktop">
+                <div class="speuLabel visible-desktop"><a href="/">speu.eu</a></div>
+                <div class="sbirkaLabel visible-desktop"><a href="/">SBÍRKAPŘÍKLADŮ.EU</a></div>
+                <div class="euLogos visible-desktop">
+                    <a href="http://www.esfcr.cz/" target="_blank"><img src="/App_Themes/Gray/imgs/logoEsf.png" alt="" /></a>
+                    <a href="http://www.europa.eu" target="_blank"><img src="/App_Themes/Gray/imgs/logoEU.png" alt="" /></a>
+                    <a href="http://www.msmt.cz/" target="_blank"><img src="/App_Themes/Gray/imgs/logoMsmt.png" alt="" /></a>
+                    <a href="http://www.msmt.cz/strukturalni-fondy/op-vpk-obdobi-2007-2013" target="_blank"><img src="/App_Themes/Gray/imgs/logoRozvoj.png" alt="" /></a>
+                    <br />
+                    <span class="investiceText">Investice do rozvoje vzdělávání</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">            
+            <div class="span3">
+                <div class="sideBar">
+                <div class="content form-search">                
+                    <uc:searchPN ID="searchPN" runat="server" />
+                    <hr />                    
+                    <asp:ContentPlaceHolder ID="sidePanel" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                
+                <div class="hidden-phone">
+                    <br />
+                    <%-- AddThis Button BEGIN --%>
+                    <div class="addthis_toolbox addthis_default_style">
+                        <a class="addthis_button_facebook">&nbsp;To se mi líbí</a>
+                        <a class="addthis_button_twitter">&nbsp;Twitter</a>                    
+                        <%-- <a class="addthis_button_pinterest_pinit"></a> --%>
+                    </div>
+                    <script type="text/javascript">var addthis_config = { "data_track_addressbar": true };</script>
+                    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4febf6eb74f2a083"></script>
+                    <!-- AddThis Button END -->
+                </div>
+                <br /><br />
+                </div>                
+            </div>
+            <div id="mainPN" class="span9">
+                <asp:ContentPlaceHolder ID="mainPanel" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>        
+        <uc:timedInfo runat="server" />
+    </div>
+    <footer>
+        <uc:footer runat="server" />
+    </footer>    
+    </form>
+    <span id="isPhone" class="visible-phone"></span>
+
+    <script type="text/jscript">
+        $('.sideBar').mouseenter(function () { $('#mainPN').animate({ opacity: .4 }, 300).clearQueue(); });
+        $('.sideBar').mouseleave(function () { $('#mainPN').animate({ opacity: 1 }, 300).clearQueue(); });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="difficultyProgressBar.ascx.cs" Inherits="SbirkaPrikladuEU.Class.difficultyProgressBar" %>
+<div id="coverDiv" runat="server" class="progress progress-info progress-striped"><div id="barDiv" class="bar" runat="server"></div></div>

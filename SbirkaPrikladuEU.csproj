@@ -1,0 +1,1645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A96BEE63-650C-4B74-84FC-08B0AB280AA2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SbirkaPrikladuEU</RootNamespace>
+    <AssemblyName>SbirkaPrikladuEU</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.51116.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\AJAX ControlToolkit\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CKEditor.NET">
+      <HintPath>..\..\ckeWiris\ckeWiris\bin\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.aspx" />
+    <Content Include="Admin\Collections\deleteCollection.aspx" />
+    <Content Include="Admin\Collections\editCollection.aspx" />
+    <Content Include="Admin\Collections\myCollectionsList.aspx" />
+    <Content Include="Admin\ContentManagement\deletedExamplesList.aspx" />
+    <Content Include="Admin\ContentManagement\exampleGroupsEdit.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\Examples\deleteExample.aspx" />
+    <Content Include="Admin\Examples\editExample.aspx" />
+    <Content Include="Admin\Examples\insertNewExample.aspx" />
+    <Content Include="Admin\Examples\myExampleList.aspx" />
+    <Content Include="Admin\Examples\verifyWirisImage.aspx" />
+    <Content Include="Admin\login.aspx" />
+    <Content Include="Admin\Users\cantLogin.aspx" />
+    <Content Include="Admin\Users\confirmUserEmailRegistration.aspx" />
+    <Content Include="Admin\Users\createUser.aspx" />
+    <Content Include="Admin\Users\deleteUser.aspx" />
+    <Content Include="Admin\Users\editUser.aspx" />
+    <Content Include="Admin\Users\emailing.aspx" />
+    <Content Include="Admin\Users\registeredUserList.aspx" />
+    <Content Include="Admin\Users\registerUser.aspx" />
+    <Content Include="Admin\Users\resetUserPassword.aspx" />
+    <Content Include="Admin\Users\updateUserProfile.aspx" />
+    <Content Include="Admin\Users\userAccountList.aspx" />
+    <Content Include="Admin\Users\userDetail.aspx" />
+    <Content Include="App_Themes\Gray\BootStrap\css\bootstrap-responsive.css" />
+    <Content Include="App_Themes\Gray\BootStrap\css\bootstrap.css" />
+    <Content Include="App_Themes\Gray\BootStrap\img\glyphicons-halflings-white.png" />
+    <Content Include="App_Themes\Gray\BootStrap\img\glyphicons-halflings.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_000_glass.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_001_leaf.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_002_dog.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_003_user.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_004_girl.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_005_car.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_006_user_add.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_007_user_remove.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_008_film.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_009_magic.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_010_envelope.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_011_camera.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_012_heart.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_013_beach_umbrella.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_014_train.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_015_print.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_016_bin.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_017_music.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_018_note.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_019_cogwheel.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_020_home.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_021_snowflake.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_022_fire.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_023_cogwheels.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_024_parents.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_025_binoculars.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_026_road.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_027_search.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_028_cars.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_029_notes_2.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_030_pencil.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_031_bus.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_032_wifi_alt.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_033_luggage.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_034_old_man.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_035_woman.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_036_file.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_037_credit.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_038_airplane.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_039_notes.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_040_stats.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_041_charts.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_042_pie_chart.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_043_group.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_044_keys.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_045_calendar.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_046_router.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_047_camera_small.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_048_dislikes.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_049_star.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_050_link.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_051_eye_open.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_052_eye_close.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_053_alarm.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_054_clock.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_055_stopwatch.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_056_projector.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_057_history.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_058_truck.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_059_cargo.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_060_compass.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_061_keynote.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_062_attach.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_063_power.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_064_lightbulb.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_065_tag.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_066_tags.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_067_cleaning.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_068_ruller.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_069_gift.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_070_umbrella.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_071_book.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_072_bookmark.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_073_signal.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_074_cup.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_075_stroller.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_076_headphones.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_077_headset.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_078_warning_sign.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_079_signal.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_080_retweet.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_081_refresh.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_082_roundabout.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_083_random.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_084_heat.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_085_repeat.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_086_display.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_087_log_book.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_088_adress_book.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_089_magnet.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_090_table.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_091_adjust.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_092_tint.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_093_crop.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_094_vector_path_square.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_095_vector_path_circle.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_096_vector_path_polygon.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_097_vector_path_line.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_098_vector_path_curve.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_099_vector_path_all.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_100_font.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_101_italic.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_102_bold.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_103_text_underline.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_104_text_strike.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_105_text_height.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_106_text_width.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_107_text_resize.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_108_left_indent.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_109_right_indent.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_110_align_left.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_111_align_center.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_112_align_right.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_113_justify.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_114_list.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_115_text_smaller.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_116_text_bigger.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_117_embed.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_118_embed_close.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_119_adjust.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_120_message_full.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_121_message_empty.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_122_message_in.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_123_message_out.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_124_message_plus.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_125_message_minus.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_126_message_ban.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_127_message_flag.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_128_message_lock.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_129_message_new.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_130_inbox.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_131_inbox_plus.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_132_inbox_minus.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_133_inbox_lock.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_134_inbox_in.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_135_inbox_out.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_136_computer_locked.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_137_computer_service.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_138_computer_proces.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_139_phone.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_140_database_lock.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_141_database_plus.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_142_database_minus.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_143_database_ban.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_144_folder_open.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_145_folder_plus.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_146_folder_minus.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_147_folder_lock.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_148_folder_flag.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_149_folder_new.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_150_check.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_151_edit.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_152_new_window.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_153_more_windows.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_154_show_big_thumbnails.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_155_show_thumbnails.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_156_show_thumbnails_with_lines.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_157_show_lines.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_158_playlist.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_159_picture.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_160_imac.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_161_macbook.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_162_ipad.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_163_iphone.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_164_iphone_transfer.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_165_iphone_exchange.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_166_ipod.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_167_ipod_shuffle.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_168_ear_plugs.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_169_albums.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_170_step_backward.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_171_fast_backward.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_172_rewind.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_173_play.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_174_pause.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_175_stop.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_176_forward.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_177_fast_forward.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_178_step_forward.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_179_eject.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_180_facetime_video.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_181_download_alt.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_182_mute.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_183_volume_down.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_184_volume_up.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_185_screenshot.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_186_move.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_187_more.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_188_brightness_reduce.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_189_brightness_increase.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_190_circle_plus.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_191_circle_minus.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_192_circle_remove.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_193_circle_ok.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_194_circle_question_mark.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_195_circle_info.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_196_circle_exclamation_mark.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_197_remove.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_198_ok.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_199_ban.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_200_download.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_201_upload.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_202_shopping_cart.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_203_lock.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_204_unlock.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_205_electricity.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_206_ok_2.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_207_remove_2.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_208_cart_out.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_209_cart_in.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_210_left_arrow.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_211_right_arrow.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_212_down_arrow.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_213_up_arrow.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_214_resize_small.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_215_resize_full.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_216_circle_arrow_left.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_217_circle_arrow_right.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_218_circle_arrow_top.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_219_circle_arrow_down.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_220_play_button.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_221_unshare.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_222_share.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_223_thin_right_arrow.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_224_thin_arrow_left.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_225_bluetooth.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_226_euro.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_227_usd.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_228_bp.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_229_retweet_2.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_230_moon.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_231_sun.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_232_cloud.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_233_direction.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_234_brush.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_235_pen.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_236_zoom_in.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_237_zoom_out.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_238_pin.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_239_riflescope.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_240_rotation_lock.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_241_flash.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_242_google_maps.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_243_anchor.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_244_conversation.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_245_chat.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_246_male.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_247_female.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_248_asterisk.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_249_divide.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_250_snorkel_diving.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_251_scuba_diving.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_252_oxygen_bottle.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_253_fins.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_254_fishes.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_255_boat.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_256_delete_point.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_257_sheriffs_-star.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_258_qrcode.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_259_barcode.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_260_pool.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_261_buoy.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_262_spade.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_263_bank.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_264_vcard.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_265_electrical_plug.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_266_flag.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_267_credit_card.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_268_keyboard_wireless.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_269_keyboard_wired.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_270_shield.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_271_ring.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_272_cake.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_273_drink.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_274_beer.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_275_fast_food.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_276_cutlery.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_277_pizza.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_278_birthday_cake.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_279_tablet.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_280_settings.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_281_bullets.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_282_cardio.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_283_t-shirt.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_284_pants.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_285_sweater.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_286_fabric.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_287_leather.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_288_scissors.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_289_podium.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_290_skull.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_291_celebration.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_292_tea_kettle.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_293_french_press.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_294_coffe_cup.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_295_pot.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_296_grater.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_297_kettle.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_298_hospital.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_299_hospital_h.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_300_microphone.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_301_webcam.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_302_temple_christianity_church.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_303_temple_islam.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_304_temple_hindu.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_305_temple_buddhist.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_306_electrical_socket_eu.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_307_electrical_socket_us.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_308_bomb.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_309_comments.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_310_flower.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_311_baseball.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_312_rugby.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_313_ax.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_314_table_tennis.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_315_bowling.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_316_tree_conifer.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_317_tree_deciduous.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_318_more-items.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_319_sort.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_320_filter.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_321_gamepad.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_322_playing_dices.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_323_calculator.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_324_tie.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_325_wallet.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_326_share.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_327_sampler.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_328_piano.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_329_web_browser.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_330_blog.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_331_dashboard.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_332_certificate.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_333_bell.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_334_candle.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_335_pin_classic.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_336_iphone_shake.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_337_pin_flag.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_338_turtle.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_339_rabbit.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_340_globe.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_341_briefcase.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_342_hdd.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_343_thumbs_up.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_344_thumbs_down.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_345_hand_right.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_346_hand_left.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_347_hand_up.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_348_hand_down.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_349_fullscreen.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_350_shopping_bag.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_351_book_open.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_352_nameplate.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_353_nameplate_alt.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_354_vases.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_355_announcement.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_356_dumbbell.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_357_suitcase.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_358_file_import.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_359_file_export.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_360_pinterest.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_361_dropbox.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_362_google+_alt.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_363_jolicloud.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_364_yahoo.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_365_blogger.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_366_picasa.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_367_amazon.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_368_tumblr.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_369_wordpress.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_370_instapaper.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_371_evernote.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_372_xing.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_373_zootool.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_374_dribbble.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_375_deviantart.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_376_read_it_later.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_377_linked_in.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_378_forrst.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_379_pinboard.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_380_behance.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_381_github.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_382_youtube.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_383_skitch.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_384_4square.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_385_quora.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_386_google_plus.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_387_spootify.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_388_stumbleupon.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_389_readability.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_390_facebook.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_391_twitter_t.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_392_twitter.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_393_buzz.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_394_vimeo.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_395_flickr.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_396_last_fm.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_397_rss.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_398_skype.png" />
+    <Content Include="App_Themes\Gray\Glyphicons\glyphicons_399_e-mail.png" />
+    <Content Include="App_Themes\Gray\imgs\backGroundBigDesktop.jpg" />
+    <Content Include="App_Themes\Gray\imgs\emailLogo.jpg" />
+    <Content Include="App_Themes\Gray\imgs\loadingStatusBar.gif" />
+    <Content Include="App_Themes\Gray\imgs\loadingStatusCircle.gif" />
+    <Content Include="App_Themes\Gray\imgs\logoEsf.png" />
+    <Content Include="App_Themes\Gray\imgs\logoEU.png" />
+    <Content Include="App_Themes\Gray\imgs\logoMsmt.png" />
+    <Content Include="App_Themes\Gray\imgs\logoPrimMat.jpg" />
+    <Content Include="App_Themes\Gray\imgs\logoRozvoj.png" />
+    <Content Include="App_Themes\Gray\imgs\logoWiris.png" />
+    <Content Include="App_Themes\Gray\imgs\pf2013.jpg" />
+    <Content Include="App_Themes\Gray\imgs\stars.png" />
+    <Content Include="App_Themes\Gray\imgs\stars_full.png" />
+    <Content Include="App_Themes\Gray\imgs\wirisBanner.png" />
+    <Content Include="App_Themes\print.less.css" />
+    <Content Include="App_Themes\Gray\Site.less.css" />
+    <Content Include="App_Themes\Gray\imgs\backGround.jpg" />
+    <Content Include="App_Themes\Gray\imgs\logoSP.png" />
+    <Content Include="App_Themes\Gray\imgs\mrizka.png" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\CKEditor.NET.dll" />
+    <Content Include="ckeditor\ckeditor.js" />
+    <Content Include="ckeditor\config.js" />
+    <Content Include="ckeditor\contents.css" />
+    <Content Include="ckeditor\images\spacer.gif" />
+    <Content Include="ckeditor\lang\af.js" />
+    <Content Include="ckeditor\lang\ar.js" />
+    <Content Include="ckeditor\lang\bg.js" />
+    <Content Include="ckeditor\lang\bn.js" />
+    <Content Include="ckeditor\lang\bs.js" />
+    <Content Include="ckeditor\lang\ca.js" />
+    <Content Include="ckeditor\lang\cs.js" />
+    <Content Include="ckeditor\lang\cy.js" />
+    <Content Include="ckeditor\lang\da.js" />
+    <Content Include="ckeditor\lang\de.js" />
+    <Content Include="ckeditor\lang\el.js" />
+    <Content Include="ckeditor\lang\en-au.js" />
+    <Content Include="ckeditor\lang\en-ca.js" />
+    <Content Include="ckeditor\lang\en-gb.js" />
+    <Content Include="ckeditor\lang\en.js" />
+    <Content Include="ckeditor\lang\eo.js" />
+    <Content Include="ckeditor\lang\es.js" />
+    <Content Include="ckeditor\lang\et.js" />
+    <Content Include="ckeditor\lang\eu.js" />
+    <Content Include="ckeditor\lang\fa.js" />
+    <Content Include="ckeditor\lang\fi.js" />
+    <Content Include="ckeditor\lang\fo.js" />
+    <Content Include="ckeditor\lang\fr-ca.js" />
+    <Content Include="ckeditor\lang\fr.js" />
+    <Content Include="ckeditor\lang\gl.js" />
+    <Content Include="ckeditor\lang\gu.js" />
+    <Content Include="ckeditor\lang\he.js" />
+    <Content Include="ckeditor\lang\hi.js" />
+    <Content Include="ckeditor\lang\hr.js" />
+    <Content Include="ckeditor\lang\hu.js" />
+    <Content Include="ckeditor\lang\is.js" />
+    <Content Include="ckeditor\lang\it.js" />
+    <Content Include="ckeditor\lang\ja.js" />
+    <Content Include="ckeditor\lang\ka.js" />
+    <Content Include="ckeditor\lang\km.js" />
+    <Content Include="ckeditor\lang\ko.js" />
+    <Content Include="ckeditor\lang\lt.js" />
+    <Content Include="ckeditor\lang\lv.js" />
+    <Content Include="ckeditor\lang\mn.js" />
+    <Content Include="ckeditor\lang\ms.js" />
+    <Content Include="ckeditor\lang\nb.js" />
+    <Content Include="ckeditor\lang\nl.js" />
+    <Content Include="ckeditor\lang\no.js" />
+    <Content Include="ckeditor\lang\pl.js" />
+    <Content Include="ckeditor\lang\pt-br.js" />
+    <Content Include="ckeditor\lang\pt.js" />
+    <Content Include="ckeditor\lang\ro.js" />
+    <Content Include="ckeditor\lang\ru.js" />
+    <Content Include="ckeditor\lang\sk.js" />
+    <Content Include="ckeditor\lang\sl.js" />
+    <Content Include="ckeditor\lang\sr-latn.js" />
+    <Content Include="ckeditor\lang\sr.js" />
+    <Content Include="ckeditor\lang\sv.js" />
+    <Content Include="ckeditor\lang\th.js" />
+    <Content Include="ckeditor\lang\tr.js" />
+    <Content Include="ckeditor\lang\uk.js" />
+    <Content Include="ckeditor\lang\vi.js" />
+    <Content Include="ckeditor\lang\zh-cn.js" />
+    <Content Include="ckeditor\lang\zh.js" />
+    <Content Include="ckeditor\lang\_languages.js" />
+    <Content Include="ckeditor\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\photogalleryBrowser.aspx" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\core\cas.gif" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\core\cas.js" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\core\core.js" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\core\display.js" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\core\displaymathml.js" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\core\editor.js" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\core\icons\cas.gif" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\core\icons\formula.gif" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\core\icons\tiny_mce\cas.gif" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\core\icons\tiny_mce\formula.gif" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\core\icons\xinha\cas.gif" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\core\icons\xinha\formula.gif" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\plugin.js" />
+    <Content Include="ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="ckeditor\plugins\xml\plugin.js" />
+    <Content Include="ckeditor\skins\kama\dialog.css" />
+    <Content Include="ckeditor\skins\kama\editor.css" />
+    <Content Include="ckeditor\skins\kama\icons.png" />
+    <Content Include="ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="ckeditor\skins\kama\skin.js" />
+    <Content Include="ckeditor\skins\kama\templates.css" />
+    <Content Include="ckeditor\skins\office2003\dialog.css" />
+    <Content Include="ckeditor\skins\office2003\editor.css" />
+    <Content Include="ckeditor\skins\office2003\icons.png" />
+    <Content Include="ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\office2003\skin.js" />
+    <Content Include="ckeditor\skins\office2003\templates.css" />
+    <Content Include="ckeditor\skins\v2\dialog.css" />
+    <Content Include="ckeditor\skins\v2\editor.css" />
+    <Content Include="ckeditor\skins\v2\icons.png" />
+    <Content Include="ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="ckeditor\skins\v2\skin.js" />
+    <Content Include="ckeditor\skins\v2\templates.css" />
+    <Content Include="ckeditor\themes\default\theme.js" />
+    <Content Include="Class\addExampleToCollectionBT.ascx" />
+    <Content Include="Class\difficultyProgressBar.ascx" />
+    <Content Include="Class\downloadFile.aspx" />
+    <Content Include="Class\examplesFromGroupId.ascx" />
+    <Content Include="Class\filter.ascx" />
+    <Content Include="Class\footer.ascx" />
+    <Content Include="Class\gridViewPager.ascx" />
+    <Content Include="Class\groupMenu.ascx" />
+    <Content Include="Class\htmlToPdf.aspx" />
+    <Content Include="Class\lastInsertedExamples.ascx" />
+    <Content Include="Class\mpTextBox.ascx" />
+    <Content Include="Class\printBT.ascx" />
+    <Content Include="Class\ratingStars.ascx" />
+    <Content Include="Class\reportExampleBT.ascx" />
+    <Content Include="Class\searchExamplesByAuthorShowResult.aspx" />
+    <Content Include="Class\searchPN.ascx" />
+    <Content Include="Class\timedInfo.ascx" />
+    <Content Include="Class\topMenu.ascx" />
+    <Content Include="Class\updatedExamplesInCollectionsAlert.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Generators\Goniometricke-funkce\obecny-trojuhelnik.aspx" />
+    <Content Include="Generators\Goniometricke-funkce\prevod-na-radiany.aspx" />
+    <Content Include="Generators\Goniometricke-funkce\prevod-na-stupne.aspx" />
+    <Content Include="Generators\Goniometricke-funkce\zakladni-uhel.aspx" />
+    <Content Include="Generators\Kvadraticka-funkce\graf-tabulkou.aspx" />
+    <Content Include="Generators\Kvadraticka-funkce\graf-transformaci.aspx" />
+    <Content Include="Generators\Kvadraticka-funkce\kvadraticka-nerovnice.aspx" />
+    <Content Include="Generators\Kvadraticka-funkce\kvadraticka-rovnice.aspx" />
+    <Content Include="Generators\Kvadraticka-funkce\obor-hodnot.aspx" />
+    <Content Include="Generators\Kvadraticka-funkce\pruseciky.aspx" />
+    <Content Include="Generators\Kvadraticka-funkce\sestav-rovnici01.aspx" />
+    <Content Include="Generators\Kvadraticka-funkce\sestav-rovnici02.aspx" />
+    <Content Include="Generators\Linearni-funkce-a-rovnice\najdi-funkci.aspx" />
+    <Content Include="Generators\Linearni-funkce-a-rovnice\obor-hodnot.aspx" />
+    <Content Include="Generators\Linearni-funkce-a-rovnice\pruseciky.aspx" />
+    <Content Include="Generators\Linearni-funkce-a-rovnice\sestroj-graf-1.aspx" />
+    <Content Include="Generators\Linearni-funkce-a-rovnice\sestroj-graf-2.aspx" />
+    <Content Include="Generators\Linearni-funkce-a-rovnice\soustava-tri-rovnic.aspx" />
+    <Content Include="Generators\Logaritmy\logaritmy01.aspx" />
+    <Content Include="Generators\Logaritmy\logaritmy02.aspx" />
+    <Content Include="Generators\Mnohouhelniky\obsah-nepravidelneho.aspx" />
+    <Content Include="Generators\Mnohouhelniky\obsah-pravidelneho.aspx" />
+    <Content Include="Generators\Odmocniny\castecne-odmocneni.aspx" />
+    <Content Include="Generators\Odmocniny\nasobeni.aspx" />
+    <Content Include="Generators\Odmocniny\scitani.aspx" />
+    <Content Include="Generators\Odmocniny\umocneni.aspx" />
+    <Content Include="Generators\Odmocniny\usmerneni01.aspx" />
+    <Content Include="Generators\Odmocniny\usmerneni02.aspx" />
+    <Content Include="Generators\Posloupnosti\aritmeticka-posloupnost01.aspx" />
+    <Content Include="Generators\Posloupnosti\aritmeticka-posloupnost02.aspx" />
+    <Content Include="Generators\Posloupnosti\aritmeticka-posloupnost03.aspx" />
+    <Content Include="Generators\Posloupnosti\geometricka-posloupnost.aspx" />
+    <Content Include="Generators\Prace-s-cisly\deleni.aspx" />
+    <Content Include="Generators\Prace-s-cisly\kraceni.aspx" />
+    <Content Include="Generators\Prace-s-cisly\nasobeni.aspx" />
+    <Content Include="Generators\Prace-s-cisly\procenta.aspx" />
+    <Content Include="Generators\Prace-s-cisly\rozsirovani.aspx" />
+    <Content Include="Generators\Prace-s-cisly\scitani.aspx" />
+    <Content Include="Generators\Prace-s-cisly\slozene-zlomky.aspx" />
+    <Content Include="Generators\Prace-s-cisly\smisena-cisla-1.aspx" />
+    <Content Include="Generators\Prace-s-cisly\smisena-cisla-2.aspx" />
+    <Content Include="Generators\Shodna-zobrazeni\najdi-shodne-zobrazeni.aspx" />
+    <Content Include="Generators\Shodna-zobrazeni\posunuti.aspx" />
+    <Content Include="Generators\Shodna-zobrazeni\rotace.aspx" />
+    <Content Include="Generators\Shodna-zobrazeni\shodne-zobrazeni-v-soustave.aspx" />
+    <Content Include="Generators\Shodna-zobrazeni\soumernosti.aspx" />
+    <Content Include="imgrecompute.aspx" />
+    <Content Include="robots.txt" />
+    <Content Include="rss.aspx" />
+    <Content Include="scheduledTasks.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\gwRowExpander.js" />
+    <Content Include="Scripts\helpWizzard.js" />
+    <Content Include="Scripts\jquery-1.7.2.js" />
+    <Content Include="Scripts\less-1.3.0.min.js" />
+    <Content Include="search.aspx" />
+    <Content Include="showCollection.aspx" />
+    <Content Include="showExample.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="sitemap.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ckeditor\plugins\ckeditor_wiris\configuration.ini" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\integration\api.php" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\integration\cas.php" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\integration\ConfigurationUpdater.php" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\integration\createcasimage.php" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\integration\createimage.php" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\integration\editor.php" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\integration\getconfig.php" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\integration\getmathml.php" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\integration\libwiris.php" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\integration\service.php" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\integration\showcasimage.php" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\integration\showimage.php" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\integration\test.php" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\integration\TestConfigurationUpdater.php" />
+    <Content Include="Admin\Web.config" />
+    <Content Include="Admin\Users\Web.config" />
+    <Content Include="Admin\Examples\Web.config" />
+    <Content Include="App_Themes\Gray\Site.skin" />
+    <Content Include="Admin\ContentManagement\Web.config" />
+    <Content Include="Admin\Collections\Web.config" />
+    <Content Include="withSideBar.Master" />
+    <Content Include="withoutSideBar.Master" />
+    <Content Include="ckeditor\plugins\ckeditor_wiris\integration\api-zaloha.php" />
+    <Content Include="Class\printToPdf.ashx" />
+    <Content Include="wkHtmlToPdf\libeay32.dll" />
+    <Content Include="wkHtmlToPdf\libgcc_s_dw2-1.dll" />
+    <Content Include="wkHtmlToPdf\ssleay32.dll" />
+    <Content Include="wkHtmlToPdf\uninstall.exe" />
+    <Content Include="wkHtmlToPdf\wkhtmltopdf.exe" />
+    <Content Include="Xml\WirisExport.aspx" />
+    <None Include="Properties\PublishProfiles\Profile02.pubxml" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Collections\deleteCollection.aspx.cs">
+      <DependentUpon>deleteCollection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Collections\deleteCollection.aspx.designer.cs">
+      <DependentUpon>deleteCollection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Collections\editCollection.aspx.cs">
+      <DependentUpon>editCollection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Collections\editCollection.aspx.designer.cs">
+      <DependentUpon>editCollection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Collections\myCollectionsList.aspx.cs">
+      <DependentUpon>myCollectionsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Collections\myCollectionsList.aspx.designer.cs">
+      <DependentUpon>myCollectionsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ContentManagement\deletedExamplesList.aspx.cs">
+      <DependentUpon>deletedExamplesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ContentManagement\deletedExamplesList.aspx.designer.cs">
+      <DependentUpon>deletedExamplesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ContentManagement\exampleGroupsEdit.aspx.cs">
+      <DependentUpon>exampleGroupsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ContentManagement\exampleGroupsEdit.aspx.designer.cs">
+      <DependentUpon>exampleGroupsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Examples\deleteExample.aspx.cs">
+      <DependentUpon>deleteExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Examples\deleteExample.aspx.designer.cs">
+      <DependentUpon>deleteExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Examples\editExample.aspx.cs">
+      <DependentUpon>editExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Examples\editExample.aspx.designer.cs">
+      <DependentUpon>editExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Examples\insertNewExample.aspx.cs">
+      <DependentUpon>insertNewExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Examples\insertNewExample.aspx.designer.cs">
+      <DependentUpon>insertNewExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Examples\myExampleList.aspx.cs">
+      <DependentUpon>myExampleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Examples\myExampleList.aspx.designer.cs">
+      <DependentUpon>myExampleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Examples\verifyWirisImage.aspx.cs">
+      <DependentUpon>verifyWirisImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Examples\verifyWirisImage.aspx.designer.cs">
+      <DependentUpon>verifyWirisImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users\cantLogin.aspx.cs">
+      <DependentUpon>cantLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users\cantLogin.aspx.designer.cs">
+      <DependentUpon>cantLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users\confirmUserEmailRegistration.aspx.cs">
+      <DependentUpon>confirmUserEmailRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users\confirmUserEmailRegistration.aspx.designer.cs">
+      <DependentUpon>confirmUserEmailRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users\createUser.aspx.cs">
+      <DependentUpon>createUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users\createUser.aspx.designer.cs">
+      <DependentUpon>createUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users\deleteUser.aspx.cs">
+      <DependentUpon>deleteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users\deleteUser.aspx.designer.cs">
+      <DependentUpon>deleteUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users\editUser.aspx.cs">
+      <DependentUpon>editUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users\editUser.aspx.designer.cs">
+      <DependentUpon>editUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users\emailing.aspx.cs">
+      <DependentUpon>emailing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users\emailing.aspx.designer.cs">
+      <DependentUpon>emailing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users\registeredUserList.aspx.cs">
+      <DependentUpon>registeredUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users\registeredUserList.aspx.designer.cs">
+      <DependentUpon>registeredUserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users\registerUser.aspx.cs">
+      <DependentUpon>registerUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users\registerUser.aspx.designer.cs">
+      <DependentUpon>registerUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users\resetUserPassword.aspx.cs">
+      <DependentUpon>resetUserPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users\resetUserPassword.aspx.designer.cs">
+      <DependentUpon>resetUserPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users\updateUserProfile.aspx.cs">
+      <DependentUpon>updateUserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users\updateUserProfile.aspx.designer.cs">
+      <DependentUpon>updateUserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users\userAccountList.aspx.cs">
+      <DependentUpon>userAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users\userAccountList.aspx.designer.cs">
+      <DependentUpon>userAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users\userDetail.aspx.cs">
+      <DependentUpon>userDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users\userDetail.aspx.designer.cs">
+      <DependentUpon>userDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ckeditor\photogalleryBrowser.aspx.cs">
+      <DependentUpon>photogalleryBrowser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ckeditor\photogalleryBrowser.aspx.designer.cs">
+      <DependentUpon>photogalleryBrowser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\addExampleToCollectionBT.ascx.cs">
+      <DependentUpon>addExampleToCollectionBT.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\addExampleToCollectionBT.ascx.designer.cs">
+      <DependentUpon>addExampleToCollectionBT.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\collectionManager.cs" />
+    <Compile Include="Class\dboManager.cs" />
+    <Compile Include="Class\difficultyProgressBar.ascx.cs">
+      <DependentUpon>difficultyProgressBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\difficultyProgressBar.ascx.designer.cs">
+      <DependentUpon>difficultyProgressBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\downloadFile.aspx.cs">
+      <DependentUpon>downloadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\downloadFile.aspx.designer.cs">
+      <DependentUpon>downloadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\emailManager.cs" />
+    <Compile Include="Class\exampleManager.cs" />
+    <Compile Include="Class\examplesFromGroupId.ascx.cs">
+      <DependentUpon>examplesFromGroupId.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\examplesFromGroupId.ascx.designer.cs">
+      <DependentUpon>examplesFromGroupId.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\fileManager.cs" />
+    <Compile Include="Class\filter.ascx.cs">
+      <DependentUpon>filter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\filter.ascx.designer.cs">
+      <DependentUpon>filter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\footer.ascx.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\footer.ascx.designer.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\gridViewPager.ascx.cs">
+      <DependentUpon>gridViewPager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\gridViewPager.ascx.designer.cs">
+      <DependentUpon>gridViewPager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\groupMenu.ascx.cs">
+      <DependentUpon>groupMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\groupMenu.ascx.designer.cs">
+      <DependentUpon>groupMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\htmlToPdf.aspx.cs">
+      <DependentUpon>htmlToPdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\htmlToPdf.aspx.designer.cs">
+      <DependentUpon>htmlToPdf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\lastInsertedExamples.ascx.cs">
+      <DependentUpon>lastInsertedExamples.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\lastInsertedExamples.ascx.designer.cs">
+      <DependentUpon>lastInsertedExamples.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\mpTextBox.ascx.cs">
+      <DependentUpon>mpTextBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\mpTextBox.ascx.designer.cs">
+      <DependentUpon>mpTextBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\mpTreeView.cs" />
+    <Compile Include="Class\printBT.ascx.cs">
+      <DependentUpon>printBT.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\printBT.ascx.designer.cs">
+      <DependentUpon>printBT.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\printToPdf.ashx.cs">
+      <DependentUpon>printToPdf.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\ratingStars.ascx.cs">
+      <DependentUpon>ratingStars.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\ratingStars.ascx.designer.cs">
+      <DependentUpon>ratingStars.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\reportExampleBT.ascx.cs">
+      <DependentUpon>reportExampleBT.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\reportExampleBT.ascx.designer.cs">
+      <DependentUpon>reportExampleBT.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\searchExamplesByAuthorShowResult.aspx.cs">
+      <DependentUpon>searchExamplesByAuthorShowResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\searchExamplesByAuthorShowResult.aspx.designer.cs">
+      <DependentUpon>searchExamplesByAuthorShowResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\searchPN.ascx.cs">
+      <DependentUpon>searchPN.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\searchPN.ascx.designer.cs">
+      <DependentUpon>searchPN.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\TextTransform.cs" />
+    <Compile Include="Class\timedInfo.ascx.cs">
+      <DependentUpon>timedInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\timedInfo.ascx.designer.cs">
+      <DependentUpon>timedInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\topMenu.ascx.cs">
+      <DependentUpon>topMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\topMenu.ascx.designer.cs">
+      <DependentUpon>topMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\updatedExamplesInCollectionsAlert.ascx.cs">
+      <DependentUpon>updatedExamplesInCollectionsAlert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\updatedExamplesInCollectionsAlert.ascx.designer.cs">
+      <DependentUpon>updatedExamplesInCollectionsAlert.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\user.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Goniometricke-funkce\obecny-trojuhelnik.aspx.cs">
+      <DependentUpon>obecny-trojuhelnik.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Goniometricke-funkce\obecny-trojuhelnik.aspx.designer.cs">
+      <DependentUpon>obecny-trojuhelnik.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Goniometricke-funkce\prevod-na-radiany.aspx.cs">
+      <DependentUpon>prevod-na-radiany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Goniometricke-funkce\prevod-na-radiany.aspx.designer.cs">
+      <DependentUpon>prevod-na-radiany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Goniometricke-funkce\prevod-na-stupne.aspx.cs">
+      <DependentUpon>prevod-na-stupne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Goniometricke-funkce\prevod-na-stupne.aspx.designer.cs">
+      <DependentUpon>prevod-na-stupne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Goniometricke-funkce\zakladni-uhel.aspx.cs">
+      <DependentUpon>zakladni-uhel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Goniometricke-funkce\zakladni-uhel.aspx.designer.cs">
+      <DependentUpon>zakladni-uhel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\graf-tabulkou.aspx.cs">
+      <DependentUpon>graf-tabulkou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\graf-tabulkou.aspx.designer.cs">
+      <DependentUpon>graf-tabulkou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\graf-transformaci.aspx.cs">
+      <DependentUpon>graf-transformaci.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\graf-transformaci.aspx.designer.cs">
+      <DependentUpon>graf-transformaci.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\kvadraticka-nerovnice.aspx.cs">
+      <DependentUpon>kvadraticka-nerovnice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\kvadraticka-nerovnice.aspx.designer.cs">
+      <DependentUpon>kvadraticka-nerovnice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\kvadraticka-rovnice.aspx.cs">
+      <DependentUpon>kvadraticka-rovnice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\kvadraticka-rovnice.aspx.designer.cs">
+      <DependentUpon>kvadraticka-rovnice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\obor-hodnot.aspx.cs">
+      <DependentUpon>obor-hodnot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\obor-hodnot.aspx.designer.cs">
+      <DependentUpon>obor-hodnot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\pruseciky.aspx.cs">
+      <DependentUpon>pruseciky.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\pruseciky.aspx.designer.cs">
+      <DependentUpon>pruseciky.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\sestav-rovnici01.aspx.cs">
+      <DependentUpon>sestav-rovnici01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\sestav-rovnici01.aspx.designer.cs">
+      <DependentUpon>sestav-rovnici01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\sestav-rovnici02.aspx.cs">
+      <DependentUpon>sestav-rovnici02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Kvadraticka-funkce\sestav-rovnici02.aspx.designer.cs">
+      <DependentUpon>sestav-rovnici02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Linearni-funkce-a-rovnice\najdi-funkci.aspx.cs">
+      <DependentUpon>najdi-funkci.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Linearni-funkce-a-rovnice\najdi-funkci.aspx.designer.cs">
+      <DependentUpon>najdi-funkci.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Linearni-funkce-a-rovnice\obor-hodnot.aspx.cs">
+      <DependentUpon>obor-hodnot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Linearni-funkce-a-rovnice\obor-hodnot.aspx.designer.cs">
+      <DependentUpon>obor-hodnot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Linearni-funkce-a-rovnice\pruseciky.aspx.cs">
+      <DependentUpon>pruseciky.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Linearni-funkce-a-rovnice\pruseciky.aspx.designer.cs">
+      <DependentUpon>pruseciky.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Linearni-funkce-a-rovnice\sestroj-graf-1.aspx.cs">
+      <DependentUpon>sestroj-graf-1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Linearni-funkce-a-rovnice\sestroj-graf-1.aspx.designer.cs">
+      <DependentUpon>sestroj-graf-1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Linearni-funkce-a-rovnice\sestroj-graf-2.aspx.cs">
+      <DependentUpon>sestroj-graf-2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Linearni-funkce-a-rovnice\sestroj-graf-2.aspx.designer.cs">
+      <DependentUpon>sestroj-graf-2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Linearni-funkce-a-rovnice\soustava-tri-rovnic.aspx.cs">
+      <DependentUpon>soustava-tri-rovnic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Linearni-funkce-a-rovnice\soustava-tri-rovnic.aspx.designer.cs">
+      <DependentUpon>soustava-tri-rovnic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Logaritmy\logaritmy01.aspx.cs">
+      <DependentUpon>logaritmy01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Logaritmy\logaritmy01.aspx.designer.cs">
+      <DependentUpon>logaritmy01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Logaritmy\logaritmy02.aspx.cs">
+      <DependentUpon>logaritmy02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Logaritmy\logaritmy02.aspx.designer.cs">
+      <DependentUpon>logaritmy02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Mnohouhelniky\obsah-nepravidelneho.aspx.cs">
+      <DependentUpon>obsah-nepravidelneho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Mnohouhelniky\obsah-nepravidelneho.aspx.designer.cs">
+      <DependentUpon>obsah-nepravidelneho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Mnohouhelniky\obsah-pravidelneho.aspx.cs">
+      <DependentUpon>obsah-pravidelneho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Mnohouhelniky\obsah-pravidelneho.aspx.designer.cs">
+      <DependentUpon>obsah-pravidelneho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Odmocniny\castecne-odmocneni.aspx.cs">
+      <DependentUpon>castecne-odmocneni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Odmocniny\castecne-odmocneni.aspx.designer.cs">
+      <DependentUpon>castecne-odmocneni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Odmocniny\nasobeni.aspx.cs">
+      <DependentUpon>nasobeni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Odmocniny\nasobeni.aspx.designer.cs">
+      <DependentUpon>nasobeni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Odmocniny\scitani.aspx.cs">
+      <DependentUpon>scitani.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Odmocniny\scitani.aspx.designer.cs">
+      <DependentUpon>scitani.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Odmocniny\umocneni.aspx.cs">
+      <DependentUpon>umocneni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Odmocniny\umocneni.aspx.designer.cs">
+      <DependentUpon>umocneni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Odmocniny\usmerneni01.aspx.cs">
+      <DependentUpon>usmerneni01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Odmocniny\usmerneni01.aspx.designer.cs">
+      <DependentUpon>usmerneni01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Odmocniny\usmerneni02.aspx.cs">
+      <DependentUpon>usmerneni02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Odmocniny\usmerneni02.aspx.designer.cs">
+      <DependentUpon>usmerneni02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Posloupnosti\aritmeticka-posloupnost01.aspx.cs">
+      <DependentUpon>aritmeticka-posloupnost01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Posloupnosti\aritmeticka-posloupnost01.aspx.designer.cs">
+      <DependentUpon>aritmeticka-posloupnost01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Posloupnosti\aritmeticka-posloupnost02.aspx.cs">
+      <DependentUpon>aritmeticka-posloupnost02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Posloupnosti\aritmeticka-posloupnost02.aspx.designer.cs">
+      <DependentUpon>aritmeticka-posloupnost02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Posloupnosti\aritmeticka-posloupnost03.aspx.cs">
+      <DependentUpon>aritmeticka-posloupnost03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Posloupnosti\aritmeticka-posloupnost03.aspx.designer.cs">
+      <DependentUpon>aritmeticka-posloupnost03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Posloupnosti\geometricka-posloupnost.aspx.cs">
+      <DependentUpon>geometricka-posloupnost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Posloupnosti\geometricka-posloupnost.aspx.designer.cs">
+      <DependentUpon>geometricka-posloupnost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\deleni.aspx.cs">
+      <DependentUpon>deleni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\deleni.aspx.designer.cs">
+      <DependentUpon>deleni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\kraceni.aspx.cs">
+      <DependentUpon>kraceni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\kraceni.aspx.designer.cs">
+      <DependentUpon>kraceni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\nasobeni.aspx.cs">
+      <DependentUpon>nasobeni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\nasobeni.aspx.designer.cs">
+      <DependentUpon>nasobeni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\procenta.aspx.cs">
+      <DependentUpon>procenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\procenta.aspx.designer.cs">
+      <DependentUpon>procenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\rozsirovani.aspx.cs">
+      <DependentUpon>rozsirovani.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\rozsirovani.aspx.designer.cs">
+      <DependentUpon>rozsirovani.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\scitani.aspx.cs">
+      <DependentUpon>scitani.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\scitani.aspx.designer.cs">
+      <DependentUpon>scitani.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\slozene-zlomky.aspx.cs">
+      <DependentUpon>slozene-zlomky.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\slozene-zlomky.aspx.designer.cs">
+      <DependentUpon>slozene-zlomky.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\smisena-cisla-1.aspx.cs">
+      <DependentUpon>smisena-cisla-1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\smisena-cisla-1.aspx.designer.cs">
+      <DependentUpon>smisena-cisla-1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\smisena-cisla-2.aspx.cs">
+      <DependentUpon>smisena-cisla-2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Prace-s-cisly\smisena-cisla-2.aspx.designer.cs">
+      <DependentUpon>smisena-cisla-2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Shodna-zobrazeni\najdi-shodne-zobrazeni.aspx.cs">
+      <DependentUpon>najdi-shodne-zobrazeni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Shodna-zobrazeni\najdi-shodne-zobrazeni.aspx.designer.cs">
+      <DependentUpon>najdi-shodne-zobrazeni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Shodna-zobrazeni\posunuti.aspx.cs">
+      <DependentUpon>posunuti.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Shodna-zobrazeni\posunuti.aspx.designer.cs">
+      <DependentUpon>posunuti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Shodna-zobrazeni\rotace.aspx.cs">
+      <DependentUpon>rotace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Shodna-zobrazeni\rotace.aspx.designer.cs">
+      <DependentUpon>rotace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Shodna-zobrazeni\shodne-zobrazeni-v-soustave.aspx.cs">
+      <DependentUpon>shodne-zobrazeni-v-soustave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Shodna-zobrazeni\shodne-zobrazeni-v-soustave.aspx.designer.cs">
+      <DependentUpon>shodne-zobrazeni-v-soustave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Shodna-zobrazeni\soumernosti.aspx.cs">
+      <DependentUpon>soumernosti.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generators\Shodna-zobrazeni\soumernosti.aspx.designer.cs">
+      <DependentUpon>soumernosti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="imgrecompute.aspx.cs">
+      <DependentUpon>imgrecompute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="imgrecompute.aspx.designer.cs">
+      <DependentUpon>imgrecompute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rss.aspx.cs">
+      <DependentUpon>rss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rss.aspx.designer.cs">
+      <DependentUpon>rss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scheduledTasks.aspx.cs">
+      <DependentUpon>scheduledTasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scheduledTasks.aspx.designer.cs">
+      <DependentUpon>scheduledTasks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search.aspx.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search.aspx.designer.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showCollection.aspx.cs">
+      <DependentUpon>showCollection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showCollection.aspx.designer.cs">
+      <DependentUpon>showCollection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showExample.aspx.cs">
+      <DependentUpon>showExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showExample.aspx.designer.cs">
+      <DependentUpon>showExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sitemap.aspx.cs">
+      <DependentUpon>sitemap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sitemap.aspx.designer.cs">
+      <DependentUpon>sitemap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="withoutSideBar.Master.cs">
+      <DependentUpon>withoutSideBar.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="withoutSideBar.Master.designer.cs">
+      <DependentUpon>withoutSideBar.Master</DependentUpon>
+    </Compile>
+    <Compile Include="withSideBar.Master.cs">
+      <DependentUpon>withSideBar.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="withSideBar.Master.designer.cs">
+      <DependentUpon>withSideBar.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Xml\WirisExport.aspx.cs">
+      <DependentUpon>WirisExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xml\WirisExport.aspx.designer.cs">
+      <DependentUpon>WirisExport.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Files\Temp\" />
+    <Folder Include="Files\UserUploadFiles\" />
+    <Folder Include="Files\Wiris\cache\" />
+    <Folder Include="Files\Wiris\formulas\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>25399</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

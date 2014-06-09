@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 12.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="12.0">
+ <Targets>
+  <Target Name="D:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\bin\SbirkaPrikladuEU.dll">
+   <Modules>
+    <Module Name="sbirkaprikladueu.dll">
+     <Namespaces>
+      <Namespace Name="SbirkaPrikladuEU">
+       <Types>
+        <Type Name="collectionManager" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#recomputePositions(System.Int64)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="collectionManager.cs" Line="177">The query string passed to 'SqlCommand.CommandText.set(string)' in 'collectionManager.recomputePositions(long)' could contain the following variables 'i', 'reader["id"]'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="dboManager" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="Breaking">
+           <Issue Name="ProvideDisposeBool" Certainty="95" Level="Error">Provide an overridable implementation of Dispose(bool) on 'dboManager' or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="command" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="dboManager.cs" Line="64">'dboManager' contains field 'dboManager.command' that is of IDisposable type: 'SqlCommand'. Change the Dispose method on 'dboManager' to call Dispose or Close on this field.</Issue>
+            </Message>
+            <Message Id="command2" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="dboManager.cs" Line="64">'dboManager' contains field 'dboManager.command2' that is of IDisposable type: 'SqlCommand'. Change the Dispose method on 'dboManager' to call Dispose or Close on this field.</Issue>
+            </Message>
+            <Message Id="command3" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="dboManager.cs" Line="64">'dboManager' contains field 'dboManager.command3' that is of IDisposable type: 'SqlCommand'. Change the Dispose method on 'dboManager' to call Dispose or Close on this field.</Issue>
+            </Message>
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="Breaking">
+             <Issue Name="DisposeImplementation" Certainty="95" Level="Error" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="dboManager.cs" Line="64">Modify 'dboManager.Dispose()' so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteQuery(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="dboManager.cs" Line="43">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'dboManager.ExecuteQuery(string)' could contain the following variables 'queryString'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Finalize()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="Breaking">
+             <Issue Name="FinalizeImplementation" Certainty="95" Level="Error" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="dboManager.cs" Line="38">Modify 'dboManager.~dboManager()' so that it calls Dispose(false) and then returns.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#getScalar(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="dboManager.cs" Line="58">Object 'reader' can be disposed more than once in method 'dboManager.getScalar(string, string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 58</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="dboManager.cs" Line="53">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'dboManager.getScalar(string, string, string)' could contain the following variables 'propertyNameToSelect', 'dboTable', 'whereFilter'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="exampleManager" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#groupNames(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="exampleManager.cs" Line="114">The query string passed to 'SqlCommand.CommandText.set(string)' in 'exampleManager.groupNames(string)' could contain the following variables 'dboManager.command.CommandText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="exampleManager.cs" Line="115">The query string passed to 'SqlCommand.CommandText.set(string)' in 'exampleManager.groupNames(string)' could contain the following variables 'dboManager.command.CommandText', 'pomStr[...]'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#recomputeGroupPositions(System.Int64)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="exampleManager.cs" Line="95">The query string passed to 'SqlCommand.CommandText.set(string)' in 'exampleManager.recomputeGroupPositions(long)' could contain the following variables 'i', 'reader["id"]'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="search" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#goSearch()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU" File="search.aspx.cs" Line="40">The query string passed to 'SqlCommand.CommandText.set(string)' in 'search.goSearch()' could contain the following variables 'i'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU" File="search.aspx.cs" Line="51">The query string passed to 'SqlCommand.CommandText.set(string)' in 'search.goSearch()' could contain the following variables 'i'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU" File="search.aspx.cs" Line="68">The query string passed to 'SqlCommand.CommandText.set(string)' in 'search.goSearch()' could contain the following variables 'i', 'i', 'i'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="user" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#deleteUserAccount(System.Guid)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="user.cs" Line="147">The query string passed to 'SqlCommand.CommandText.set(string)' in 'user.deleteUserAccount(Guid)' could contain the following variables 'dboManager.command.CommandText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="user.cs" Line="148">The query string passed to 'SqlCommand.CommandText.set(string)' in 'user.deleteUserAccount(Guid)' could contain the following variables 'dboManager.command.CommandText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="user.cs" Line="149">The query string passed to 'SqlCommand.CommandText.set(string)' in 'user.deleteUserAccount(Guid)' could contain the following variables 'dboManager.command.CommandText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="user.cs" Line="150">The query string passed to 'SqlCommand.CommandText.set(string)' in 'user.deleteUserAccount(Guid)' could contain the following variables 'dboManager.command.CommandText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="user.cs" Line="151">The query string passed to 'SqlCommand.CommandText.set(string)' in 'user.deleteUserAccount(Guid)' could contain the following variables 'dboManager.command.CommandText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#updateUserAccount(System.Guid,System.Guid,System.String,System.String,System.String,System.String,System.String,System.Boolean)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="user.cs" Line="121">The query string passed to 'SqlCommand.CommandText.set(string)' in 'user.updateUserAccount(Guid, Guid, string, string, string, string, string, bool)' could contain the following variables 'dboManager.command.CommandText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="user.cs" Line="122">The query string passed to 'SqlCommand.CommandText.set(string)' in 'user.updateUserAccount(Guid, Guid, string, string, string, string, string, bool)' could contain the following variables 'dboManager.command.CommandText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Class" File="user.cs" Line="123">The query string passed to 'SqlCommand.CommandText.set(string)' in 'user.updateUserAccount(Guid, Guid, string, string, string, string, string, bool)' could contain the following variables 'dboManager.command.CommandText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="SbirkaPrikladuEU.Admin.ContentManagement">
+       <Types>
+        <Type Name="deletedExamplesList" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#deleteExampleDefinitively(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2014-06-09 11:51:56Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\!!!ASP.NET PARM.VISUALSTUDIO.COM!!!\SbirkaPrikladu.EU\Dev\SbirkaPrikladuEU\Admin\ContentManagement" File="deletedExamplesList.aspx.cs" Line="31">The query string passed to 'SqlCommand.CommandText.set(string)' in 'deletedExamplesList.deleteExampleDefinitively(object, EventArgs)' could contain the following variables 'dboManager.command.CommandText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213">
+   <Name>Disposable fields should be disposed</Name>
+   <Description>If a type that implements IDisposable owns fields that also implement IDisposable, the encapsulating type's Dispose() implementation should call Dispose() on each disposable field.</Description>
+   <Resolution Name="Default">{0} contains field {1} that is of IDisposable type: {2}. Change the Dispose method on {0} to call Dispose or Close on this field.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182328.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 58</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063">
+   <Name>Implement IDisposable correctly</Name>
+   <Description>All IDisposable types should implement the Dispose pattern correctly.</Description>
+   <Resolution Name="DisposeImplementation">Modify {0} so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Resolution>
+   <Resolution Name="FinalizeImplementation">Modify {0} so that it calls Dispose(false) and then returns.</Resolution>
+   <Resolution Name="ProvideDisposeBool">Provide an overridable implementation of Dispose(bool) on {0} or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms244737.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Review SQL queries for security vulnerabilities</Name>
+   <Description>A SQL command string built from user input is vulnerable to SQL injection attacks. Microsoft SQL Server and other database servers support stored procedures and parameterized SQL queries, which reduce the risk of injection attacks.</Description>
+   <Resolution Name="WithNonLiterals">The query string passed to {0} in {1} could contain the following variables {2}. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="12.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>
